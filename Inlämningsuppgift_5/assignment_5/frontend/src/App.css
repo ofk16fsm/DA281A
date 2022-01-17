@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: darkred;
+}
+
+.container{  
+  background-color: gray;
+}
+
+.label{
+  color: darkkhaki;
+  text-align: start;
+}
+
+.formGroup{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;  
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+#inputGroup{
+  display:  grid;
+}
+
+.grid-item{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-size: 25px;
+}
+.item1{
+  display: flex;
+  flex-flow: column;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.item2{
+  display: flex;
+  flex-flow: column;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.item3{
+  display: flex;
+  flex-flow: column;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.item4{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  grid-column: 1 / span 3;
+  grid-row: 2;
+}
+.item5{  
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  width: 860px;
+}
+
+.checkboxGroup{
+  display: flex;
+  flex-flow: row;
+}
+
+.item6{  
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / span 3;
+  grid-row: 4;
+  width: 860px;
+}
+
+.movie{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(212, 169, 169);
+}
+
+.details{
+  width: 750px;
+  text-align: start;
+}

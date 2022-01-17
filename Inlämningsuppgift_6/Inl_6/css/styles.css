@@ -1,0 +1,48 @@
+/* Placera er stilmall här */
+body{
+    background-color: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #root{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dialogBox{
+    width: 600px;
+  }
+
+  .listView{
+    width: 100%;
+  }
+
+  .listView th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+  }
+
+  .listView tr:hover {
+    background-color: whitesmoke;
+  }
+  
+  #query{
+    width: 28rem;
+  }
+  
+  #result{
+    text-align: left;
+    color: darkred;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .search-container{
+      display: block;
+      text-align: left;
+      width: 100%;    
+      padding: 14px;
+    }
+  }

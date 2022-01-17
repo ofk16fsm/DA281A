@@ -1,0 +1,81 @@
+const express = require("express")
+
+const PORT = process.env.PORT || 3001
+
+const app = express()
+
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+const dataFile = require('./api/movies.json')
+
+var obj = {
+    id: "tt4154796",
+    href: "https://www.imdb.com/title/tt4154796/",
+    movie_title: "Avengers: End Game",
+    description: "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.",
+    release_date: "2017-04-22",
+    genres: ["Action","Adventure","Drama"]
+}
+console.log(dataFile[0].movie_title)
+app.get("/api", (req, res) => {
+    res.json(dataFile)
+})
+
+app.post('/api', function(req, res){
+    console.log(req.body)
+    dataFile.push(obj)
+    res.send({message: "New movie created."})
+  })
+  
+
+app.listen(PORT, () => {
+    console.log(`Server listening on ${PORT}`)
+})
+
+###############################################
+const express = require("express")
+const fs = require("fs")
+var routers = require('./router.js')
+const dataFile = require('./api/movies.json')
+const PORT = process.env.PORT || 5000
+
+const app = express()
+
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
+app.on('eventAPI', function(){
+    fs.writeFile("./server/api/movies.json", JSON.stringify(dataFile, null, 2), 'utf-8', function(err){
+        if(err){
+            console.log("An error occured while writing JSON object to file")
+        }
+        console.log("JSON file has been saved")
+    })
+    return console.log("API updated")
+})
+
+app.use('/api/movies.json', routers)
+app.emit("eventAPI")
+app.listen(PORT, () => {
+    console.log(`Server listening on ${PORT}`)
+})
+
+
+{
+        id: obj.id,
+        href: obj.href,
+        movie_title: obj.movie_title,
+        description: obj.description,
+        release_date: obj.release_date,
+        genres: obj.genres
+
+    }
+
+var obj = {
+    id: "tt4154796",
+    href: "https://www.imdb.com/title/tt4154796/",
+    movie_title: "Avengers: End Game",
+    description: "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos actions and restore balance to the universe.",
+    release_date: "2017-04-22",
+    genres: ["Action","Adventure","Drama"]
+}

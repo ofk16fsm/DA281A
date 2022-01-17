@@ -1,0 +1,34 @@
+import {Card, CardHeader, CardBody, CardLink, CardFooter} from 'reactstrap'
+
+function Movie({movie, onClick}){
+    
+    return(
+        <div className="movie">
+            <Card>
+            <CardHeader>{movie.movie_title}</CardHeader>
+            <CardLink href={movie.href}>IMDB link</CardLink>
+            <CardBody className="description">{movie.description}</CardBody>
+            <CardFooter>                
+                <button onClick={onClick} type="button">Remove</button>
+            </CardFooter>
+            </Card>
+        </div>
+    )
+}
+
+export default Movie
+
+{ visible ? (data.map((item, index) =>  (
+          <Movie key={index}
+          movie={item}
+          onClick={() => deleteMovie(item)} 
+          onChange={(e) => selectedMovieChanged(e, item)}/>)
+        )) : null}
+		
+
+    else{
+      var checkboxGroup = Array.from(document.querySelectorAll('.genres'))
+      checkboxGroup.forEach(item => {
+        item.checked = false
+      });
+    }

@@ -1,0 +1,29 @@
+body{
+  background-color: darkgray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+#query{
+  width: 28rem;
+}
+
+#result{
+  text-align: left;
+  color: darkred;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container{
+    display: block;
+    text-align: left;
+    width: 100%;    
+    padding: 14px;
+  }
+}
