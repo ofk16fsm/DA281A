@@ -2,7 +2,7 @@
 Web Development II - Client
 
 #### Assignments
-* [Assignment 1](Inlämningsuppgift_1/README.md)
+* [Assignment 1](Inlämningsuppgift_1/)
 * [Assignment 2](Inlämningsuppgift_2/)
 * [Assignment 3](Inlämningsuppgift_3/)
 * [Assignment 4](Inlämningsuppgift_4/)
